@@ -1,0 +1,1636 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Retro Cool';
+    src: url('retro-cool-font/RetroCoolRegular-Yz83j.otf')format('opentype'), url('retro-cool-font/RetroCoolRegular-rgV2O.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Halloween Ghost';
+    src: url('halloween-ghost-font/HalloweenGhost-9YJK2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40%;
+}
+
+@font-face {
+    font-family: 'Craftsman';
+    src: url('craftsman-font/CraftsmanPersonalUseItalic-x3GM0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WildCrazy';
+    src: url('wildcrazy-font/Wildcrazy-WKYO.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lucy Said Ok';
+    src: url('lucy-said-ok-font/LucySaidOkPersonalUseItalic-OV9ee.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WHOA SAUCE';
+    src: url('whoa-sauce-font/WhoaSaucePersonalUseBold-mLmV5.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sprinklescolors';
+    src: url('sprinklescolors-font/Sprinklescolors-njrJ.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Crosterian';
+    src: url('crosterian/Crosterian.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Destroya';
+    src: url('destroya/Destroya.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Waltograph-Disney';
+    src: url('waltograph-disney/waltographUI.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ouroboros-Master';
+    src: url('ouroboros-master/fonts/webfonts/Ouroboros_web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tambourine';
+    src: url('tambourine/Tambourine.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(#89f7fe 0%, #66a6ff 100%);
+    background-size: 400% 400%;
+    color: #333;
+}
+
+header {
+    background-color: rgba(135, 206, 235, 0.3);
+    background-size: auto;
+    background-repeat: repeat;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 5%;
+    top: 0;
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.5s ease;
+    background-image: url(images/trippy.jpg);
+    border: 2px solid #1e90ff;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.4);
+    font-family: 'Mermaid', sans-serif;
+}
+
+#thenavbar {
+    display: block;
+    background-color: rgba(30, 144, 255, 0.5);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    overflow: hidden;
+    background-image: url(images/navbar.jpg);
+    color: #E0FFFF;
+    border-bottom: 3px solid #20B2AA;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease;
+
+    a:hover {
+        background-color: rgba(173, 216, 230, 0.7);
+        border-radius: 3px;
+        transition: background-color 0.2s ease;
+    }
+}
+
+#thenavbar ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    transition: background-color 0.3s ease;
+
+}
+
+#thenavbar li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+#thenavbar li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+
+}
+
+#thenavbar li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+#thenavbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    background-size: 200% 100%;
+    background-position: -100%;
+    transition: background-position 0.5s, color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#thenavbar a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    background-color: #4CAF50;
+    transition: width 0.3s;
+}
+
+#thenavbar a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#thenavbar a:hover {
+    background-position: 0;
+    color: #4CAF50;
+    background-image: linear-gradient(to right, transparent 50%, #4CAF50 50%);
+
+}
+
+#thenavbar a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #4CAF50;
+    transition: width 0.3s;
+    width: 0;
+    margin-top: 5px;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+#thenavbar li {
+    margin: 0 20px;
+    display: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+main {
+    padding: 2rem;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+}
+
+main:hover {
+    opacity: 0.9;
+    transform: scale(1.01);
+}
+
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover,
+a:hover {
+    transform-box: 1.05;
+}
+
+article {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f7ff;
+    color: #033e58;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #2b8ead;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    background-color: rgb(122, 244, 215);
+}
+
+
+#atlanticenvironment {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    font-family: 'Crosterian';
+    font-size: 12px;
+}
+
+#mammals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    font-family: 'WildCrazy';
+    color: black;
+}
+
+#mammals strong {
+    color: black;
+}
+
+#mammals ul {
+    color: black;
+}
+
+
+#mammals img {
+    width: 100%;
+    height: 50%;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #2E8B57;
+    color: #E0FFFF;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9em;
+    border-top: 3px solid #20B2AA;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Tambourine', sans-serif;
+    background-image: linear-gradient(to bottom, #1E90FF, #2E8B57), url('images/wavespattern.jpg');
+    background-repeat: repeat;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    clear: both;
+    font-size: 20px;
+}
+
+#featured-home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 50%;
+    float: left;
+    box-shadow: none;
+    font-family: 'Tambourine';
+}
+
+#featured-home p {
+    font-family: 'Tambourine';
+}
+
+#introduction {
+    font-family: 'Mermaid', Arial, sans-serif;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #20B2AA;
+    font-size: 14px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    width: 45%;
+    float: right;
+
+}
+
+#introduction h2 {
+    color: #003366;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 45px;
+    width: 100%;
+}
+
+#introduction p {
+    color: #333333;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    font-family: 'Destroya';
+}
+
+#introduction ol {
+    background-color: #E0FFFF;
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 3px solid #2E8B57;
+    list-style: inside;
+    margin: 0;
+    width: 100%;
+    font-family: 'Tambourine';
+
+}
+
+#introduction li {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #1E90FF;
+    font-size: 14px;
+}
+
+#introduction strong {
+    color: #006699;
+}
+
+#animalbanner {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Sprinklescolors', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 45px;
+    color: #1E90FF;
+    text-decoration: underline wavy #5F9EA0;
+}
+
+#featured-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 50%;
+    height: 50%;
+    font-family: 'Ouroboros-Master';
+    box-shadow: none;
+}
+
+#animals {
+    background-color: #e0ffff;
+    color: #003366;
+    grid-template-columns: 1fr;
+    font-family: 'Retro Cool', sans-serif;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #20B2AA;
+    box-shadow: 0 5px 15px rgba(0, 105, 148, 0.3);
+    text-align: center;
+    background-image: url('images/ocean-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease-in-out;
+    width: 50%;
+    float: left;
+}
+
+#foodchain {
+    background-color: #e0ffff;
+    color: #003366;
+    grid-template-columns: 1fr;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #20B2AA;
+    box-shadow: 0 5px 15px rgba(0, 105, 148, 0.3);
+    text-align: center;
+    background-image: url('images/ocean-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease-in-out;
+    width: 50%;
+    float: right;
+    font-family: 'Ouroboros-Master';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#foodchain img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+}
+
+#animals:hover {
+    border-color: #2E8B57;
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+}
+
+#animals p {
+    color: #0077cc;
+    font-size: 1em;
+    line-height: 1.6;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+#animals ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#animals li {
+    background-color: #f2faff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 121, 191, 0.2);
+    border-left: 5px solid #1e90ff;
+    transition: transform 0.2s ease-in-out;
+}
+
+#animals li:hover {
+    transform: translateY(-3px);
+    background-color: #e6f7ff;
+}
+
+#marine-plants {
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+
+}
+
+#conservation {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    float: right;
+}
+
+#conservation th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#conservation th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: normal;
+}
+
+#conservation tr:hover {
+    background-color: #f5f5f5;
+}
+
+#conservation th:hover {
+    background-color: darken(#4CAF50, 10%);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: normal;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+th:hover {
+    background-color: darken(#4CAF50, 10%);
+}
+
+td[rowspan] {
+    background-color: #E6E6FA;
+    vertical-align: middle;
+}
+
+td[colspan] {
+    background-color: #FFFACD;
+    text-align: center;
+}
+
+#thebanner,
+#thebannertwo,
+#thebannerthree {
+    display: block;
+    font-size: 100px;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: rgb(20, 161, 231);
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-family: 'Sprinklescolors', 'Arial', sans-serif;
+    text-shadow: 1px 1px 2px #888888;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom, #e0ffff, #b0e0e6);
+    border-color: #5F9EA0;
+    box-shadow: 0px 0px 15px 5px #5F9EA0;
+    text-decoration: underline wavy #5F9EA0;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+
+#thebanner:hover,
+#thebannertwo:hover,
+#thebannerthree:hover {
+    color: #FFD740;
+    text-shadow: 2px 2px 6px #01579B;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-color: #4FC3F7;
+}
+
+#mammaltable {
+    font-family: 'Waltograph-Disney';
+    width: 100%;
+}
+
+#theheight,
+#theheighttwo,
+#theheightthree {
+    background-color: #E0FFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #20B2AA;
+}
+
+#theheight ul,
+#theheighttwo ul,
+#theheightthree ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#theheight li,
+#theheighttwo li,
+#theheightthree li {
+    background-color: #f2faff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 121, 191, 0.2);
+    border-left: 4px solid #1e90ff;
+    transition: transform 0.2s ease-in-out;
+}
+
+#theheight li:hover,
+#theheighttwo li:hover,
+#theheightthree li:hover {
+    transform: scale(1.03);
+    background-color: #e6f7ff;
+}
+
+#theheight strong,
+#theheighttwo strong,
+#theheightthree strong {
+    color: #0077cc;
+    font-size: 18px;
+}
+
+#latestnews {
+    display: block;
+    font-size: 30px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    color: rgb(20, 161, 231);
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 5px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-family: 'Sprinklescolors', 'Arial', sans-serif;
+    text-shadow: 1px 1px 2px #888888;
+    box-shadow: 0px 0px 15px 5px #5F9EA0;
+    text-decoration: underline wavy #5F9EA0;
+    width: 50%;
+    background-image: linear-gradient(to bottom, #e0ffff, #b0e0e6);
+    border-color: #5F9EA0;
+    float: left;
+}
+
+
+#closingstatement {
+    display: bloclk;
+    font-size: 30px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    color: rgb(20, 161, 231);
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 5px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-family: 'Sprinklescolors', 'Arial', sans-serif;
+    text-shadow: 1px 1px 2px #888888;
+    box-shadow: 0px 0px 15px 5px #5F9EA0;
+    text-decoration: underline wavy #5F9EA0;
+    width: 50%;
+    background-image: linear-gradient(to bottom, #e0ffff, #b0e0e6);
+    border-color: #5F9EA0;
+}
+
+#closingone,
+#closingtwo,
+#closingthree {
+    clear: left;
+    display: block;
+    font-size: 12px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: rgb(3, 168, 158);
+    text-align: left;
+    background-color: #E0FFFF;
+    padding: 10px;
+    border: 1px solid #20B2AA;
+    border-radius: 10px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom right, #b0e0e6, #e0ffff);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+#closingone,
+#closingtwo,
+#closingthree li {
+    display: block;
+    font-size: 16px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: rgb(3, 168, 158);
+    text-align: left;
+    background-color: #E0FFFF;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom right, #b0e0e6, #e0ffff);
+    transition: all 0.3s ease;
+}
+
+#closingtwo li {
+    list-style-type: none;
+}
+
+#closingone,
+#closingtwo,
+#closingthree li:hover {
+    background-color: rgba(173, 216, 230, 0.7);
+    border-color: #1e90ff;
+}
+
+#closingintro {
+    display: block;
+    font-size: 12px;
+    margin-top: 1px;
+    margin-bottom: 0px;
+    font-weight: normal;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: none;
+}
+
+#thenews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: none;
+}
+
+#thescoopone,
+#thescooptwo,
+#thescoopthree,
+#thescoopfour,
+#thescoopfive {
+    display: block;
+    font-size: 12px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: rgb(3, 168, 158);
+    text-align: left;
+    background-color: #E0FFFF;
+    padding: 10px;
+    border: 1px solid #20B2AA;
+    border-radius: 10px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom right, #b0e0e6, #e0ffff);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+#thescoopone:hover,
+#thescooptwo:hover,
+#thescoopthree:hover,
+#thescoopfour:hover,
+#thescoopfive:hover {
+    background-color: rgba(173, 216, 230, 0.7);
+    border-color: #1e90ff;
+    box-shadow: 0px 0px 10px 3px #1e90ff;
+}
+
+#welcomesection {
+    text-align: center;
+    border-radius: 10px;
+    background-color: #E0FFFF;
+    border: 2px solid #1E90FF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0px 0;
+    width: 20%;
+    float: left;
+    grid-gap: 20px;
+}
+
+#welcomeimageone,
+#welcomeimagetwo,
+#welcomeimagethree,
+#welcomeimagefour {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#welcomebanner {
+    font-family: 'Sprinklescolors', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 35px;
+    color: #1E90FF;
+    text-decoration: underline wavy #5F9EA0;
+}
+
+#aboutsection {
+    float: right;
+    width: 75%;
+    grid-gap: 10px;
+    color: #2F4F4F;
+    background-color: #E0FFFF;
+    font-family: 'Arial', sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-left: 5px solid #1E90FF;
+    text-align: justify;
+    line-height: 1.6;
+    background-image: url('path_to_your_wave_pattern_image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 11px;
+    margin-bottom: 20px;
+    font-family: 'Crosterian';
+}
+
+#aboutsection p {
+    text-indent: 20px;
+}
+
+#aboutbannerone,
+#aboutbannertwo,
+#aboutbannerthree,
+#aboutbannerfour,
+#aboutbannerfive,
+#aboutbannersix {
+    font-family: 'Sprinklescolors', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 45px;
+    color: #1E90FF;
+    text-decoration: underline wavy #5F9EA0;
+    position: relative;
+
+}
+
+#ecosystembanner,
+#diversitybanner {
+    text-align: center;
+    color: #77581b;
+    font-family: 'Sprinklescolors', Arial, sans-serif;
+    font-size: 34px;
+    text-shadow: 2px 2px 4px #0277BD;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 3px solid #0277BD;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    display: inline-block;
+
+
+}
+
+#ecosystembanner:before,
+#diversitybanner:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    width: 10px;
+    height: 10px;
+    background-color: #4FC3F7;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+#ecosystembanner:hover,
+#diversitybanner:hover {
+    color: #FFD740;
+    text-shadow: 2px 2px 6px #01579B;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom-color: #4FC3F7;
+
+}
+
+#ecosystembanner:hover:before,
+#diversitybanner:hover:before {
+    transform: translateY(-50%) scale(1);
+}
+
+#marinespecies,
+#marinespeciestwo {
+    font-family: 'Sprinklescolors', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #1E90FF;
+    text-decoration: underline wavy #5F9EA0;
+    font-size: 30px;
+    padding: 15px;
+    background-color: rgba(173, 216, 230, 0.3);
+    border: 2px solid #5F9EA0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+#theanimals {
+    display: block;
+    font-size: 70px;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    font-weight: bold;
+    color: rgb(220, 233, 240);
+    text-align: center;
+    background-color: #E0FFFF;
+    padding: 10px;
+    border: 1px solid #5F9EA0;
+    border-radius: 5px;
+    font-family: 'Craftsman', Arial, sans-serif;
+    background-image: url('images/oceananimals.jpg');
+    background-size: auto;
+    background-repeat: repeat;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px #888888;
+}
+
+#plants,
+#seasquirts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    font-family: Destroya, Arial, sans-serif;
+    color: purple;
+}
+
+#funkelp {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 25%;
+    float: right;
+    margin: auto;
+    background-color: #e0ffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(65, 105, 225, 0.5);
+    font-family: 'Arial', sans-serif;
+    font-size: 19px;
+    border: 2px solid #4682B4;
+    color: #02075d;
+
+}
+
+#funseasquirts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 25%;
+    float: left;
+    margin: auto;
+    background-color: #e0ffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(65, 105, 225, 0.5);
+    font-family: 'Arial', sans-serif;
+    font-size: 19px;
+    border: 2px solid #5F9EA0;
+    color: #013220;
+}
+
+#funkelp h3,
+#funseasquirts h3 {
+    grid-column: 1 / -1;
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+#funkelp h3 {
+    color: #4682B4;
+}
+
+#funseasquirts h3 {
+    color: #5F9EA0;
+}
+
+#funkelp ul,
+#funseasquirts ul {
+    grid-column: 1;
+    padding: 0;
+    margin: 0;
+    list-style: disc inside;
+
+}
+
+#funkelp ul li,
+#funseasquirts ul li {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#bullkelp {
+    height: 100%;
+}
+
+#theplants {
+    display: block;
+    font-size: 70px;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: rgb(30, 144, 255);
+    text-align: center;
+    background-color: #E0FFFF;
+    padding: 10px;
+    border: 1px solid #20B2AA;
+    border-radius: 5px;
+    font-family: 'WildCrazy', Arial, sans-serif;
+    background-image: url('images/seaweed.jpg');
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px #888888;
+}
+
+
+#theenviroment {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: rgb(114, 194, 226);
+    text-align: center;
+    font-size: 70px;
+    background-color: rgba(173, 216, 230, 0.5);
+    padding: 10px;
+    border: 2px dashed #0077be;
+    border-radius: 5px;
+    font-family: 'Lucy Said Ok';
+    background-image: url(images/fishys.jpg);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    text-shadow: 2px 2px 4px #01579b;
+}
+
+#themammals {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: rgb(3, 168, 158);
+    text-align: center;
+    font-size: 70px;
+    background-color: rgba(135, 206, 235, 0.3);
+    padding: 10px;
+    border: 2px solid #1e90ff;
+    border-radius: 5px;
+    font-family: 'WHOA SAUCE', sans-serif;
+    background-image: url(images/marinemammals.jpg);
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.4);
+    text-shadow: 2px 2px 5px #004f72;
+}
+
+#godiscover {
+    font-family: 'Halloween Ghost';
+    font-size: 50px;
+}
+
+#someanimals {
+    font-family: 'Craftsman';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 60px;
+}
+
+#someplants {
+    font-family: 'WildCrazy';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 60px;
+
+}
+
+#someenviroment {
+    font-family: 'Lucy Said Ok';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 60px;
+
+}
+
+#somemammals {
+    font-family: 'WHOA SAUCE';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 60px;
+
+}
+
+#pollutiontable {
+    float: right;
+    transition: transform 0.3s ease;
+    width: 100%;
+    clear: both;
+}
+
+#pollutiontable:hover {
+    transform: translateY(-10px);
+}
+
+#mammaltable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+
+#mammaltable:hover {
+    transform: translateY(-10px);
+}
+
+#specialbanner {
+    font-family: 'Sprinklescolors', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 45px;
+    color: #1E90FF;
+    text-decoration: underline wavy #5F9EA0;
+}
+
+#thefishy {
+    background-color: #e0ffff;
+    color: #005f73;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    width: 35%;
+    float: left;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#thefishy h2 {
+    color: #003d5b;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#thefishy ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#thefishy li {
+    background-color: #edf6f9;
+    border-left: 4px solid #0077b6;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#thefishy li strong {
+    color: #0077b6;
+}
+
+#thefishy p {
+    grid-column: span 2;
+}
+
+#thefishy img {
+    width: 100%;
+    height: 100%;
+}
+
+#marinediversity {
+    background-color: #e0f7fa;
+    color: #0277bd;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    width: 35%;
+    float: left;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#environment {
+    background-color: #0077b6;
+    color: #f5f5f5;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    float: right;
+}
+
+#environment h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #f5f5f5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#environment h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#environment ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#environment li {
+    margin: 10px 0;
+}
+
+#environment a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    color: #0077b6;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#environment a:hover {
+    background-color: #0077b6;
+    color: #f5f5f5;
+}
+
+#environment img {
+    width: 100%;
+}
+
+#funfacts {
+    background-image: url('path_to_your_ocean_image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #0277BD;
+}
+
+#funfacts ul {
+    font-family: 'Retro Cool';
+
+}
+
+#funfacts a:hover {
+    color: #4DD0E1;
+    text-decoration: underline;
+}
+
+#funfacts li {
+    list-style-type: none;
+    background: url('path_to_marine_icon.png') no-repeat left center;
+    padding-left: 40px;
+    margin-bottom: 15px;
+    color: #01579B;
+    font-family: 'OceanFont', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    position: relative;
+}
+
+#funfacts li:hover {
+    background-color: #E1F5FE;
+    color: #0D47A1;
+    cursor: pointer;
+    border-left: 3px solid #4FC3F7;
+}
+
+#atlanticplants {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    background-color: #e0f7fa;
+    color: #013743;
+    font-family: 'Arial', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    line-height: 1.6;
+    width: 50%;
+    float: right;
+    font-size: 10.2px;
+}
+
+#atlanticplants h2 {
+    color: #02577a;
+    text-align: center;
+    border-bottom: 2px solid #02577a;
+    padding-bottom: 10px;
+}
+
+#atlanticplants h3 {
+    color: #0277bd;
+    margin-top: 20px;
+}
+
+#atlanticplants p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+#atlanticplants ul {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+#atlanticplants li {
+    margin-bottom: 10px;
+}
+
+#sponge {
+    width: 20%;
+    float: right;
+    color: transparent;
+
+}
+
+#marinediversity h1,
+#marinediversity h2,
+#marinediversity h3 {
+    color: #01579b;
+}
+
+#marinediversity p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+#marinediversity a {
+    color: #00838f;
+    text-decoration: none;
+}
+
+#marinediversity a:hover {
+    text-decoration: underline;
+}
+
+#marinediversity ul,
+#marinediversity ol {
+    padding-left: 20px;
+}
+
+#marinediversity li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 968px) {
+    #marinediversity {
+        padding: 15px;
+        margin: 10px;
+        width: 100%;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    #environment {
+        padding: 20px;
+        float: left;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        transform: scale(1);
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    header {
+        padding: 1rem;
+    }
+}
+
+@media (hover: hover) {
+
+    button:hover,
+    a:hover {
+        transform-box: 1.05;
+        background-color: coral;
+    }
+}
+
+@media screen and (max-width: 955px) {
+    #plants {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #seasquirts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #atlanticenvironment {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #plants {
+        grid-template-columns: 1fr;
+    }
+
+    #seasquirts {
+        grid-template-columns: 1fr;
+    }
+
+    #atlanticenvironment {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #mammals {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #mammals {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 2900px) {
+    #aboutsection {
+        width: 75%;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #aboutsection {
+        width: 85%;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #marinespecies {
+        font-size: 26px;
+    }
+
+    #welcomesection {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #marinespecies {
+        font-size: 22px;
+    }
+
+    #welcomesection {
+        width: 70%;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #marinespecies {
+        font-size: 18px;
+    }
+
+    #welcomesection {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #animals {
+        width: 100%;
+    }
+
+    #foodchain {
+        width: 100%;
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #animals {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #animals {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #featured-sections {
+        width: 100%;
+    }
+
+    #conservation {
+        width: 70%;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 1270px) {
+
+    #funkelp,
+    #funseasquirts {
+        width: 100%;
+        float: left;
+        grid-template-columns: 1fr;
+        font-size: 14px;
+    }
+
+    #atlanticplants {
+        grid-template-columns: 1fr;
+        width: 100%;
+        float: left;
+    }
+
+    #introduction {
+        float: left;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    #thefishy {
+        width: 100%;
+        float: left;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 1168px) {
+    #featured-home {
+        grid-template-columns: 1fr;
+        width: 100%;
+        float: none;
+    }
+}
